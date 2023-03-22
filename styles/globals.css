@@ -1,16 +1,41 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-primary {
+    @apply bg-white dark:bg-slate-800;
+}
+
+.btn-project {
+    @apply md:inline-flex font-bold  text-white dark:text-white bg-[#5367FF] dark:bg-slate-700 border-0 py-2 px-6 focus:outline-none hover:text-white hover:bg-[#5388FF] rounded text-lg;
+}
+.project-card {
+    @apply flex flex-col rounded-xl w-full cursor-default select-none transition duration-300 transform border border-gray-300 hover:scale-[1.02] hover:shadow-lg dark:border-gray-200/30 dark:bg-slate-700 dark:hover:shadow-gray-500/10 relative;
+}
+
+.head-link {
+    @apply mr-5 hover:text-gray-900 font-medium hover:text-[#5367FF] 
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div {
+@apply text-slate-900 dark:text-white cursor-default;
+}
+
+footer {  @apply text-gray-600 dark:text-white
+bg-gray-100 dark:bg-slate-600/20;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+@apply text-slate-800 hover:text-[#5367FF] dark:text-slate-400 dark:hover:text-slate-50;
 }
 
-* {
-  box-sizing: border-box;
+p,
+li {
+@apply text-slate-500 dark:text-slate-400;
 }
