@@ -2,7 +2,7 @@ import Layout from "../src/components/Common/Layout"
 import Head from "next/head"
 import Link from "next/link";
 import Image from "next/image";
-import profile from "../public/profile.jpeg"
+import profile from "../public/profile.jpg"
 const AboutMe = () => {
   return (
     <Layout>
