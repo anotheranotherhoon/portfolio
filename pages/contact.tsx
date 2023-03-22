@@ -4,6 +4,7 @@ import Image from "next/image"
 import MailFooterIcon from "../src/components/SVG/Footer/MailFooterIcon"
 import GithubFooterIcon from "../src/components/SVG/Footer/GithubFooterIcon"
 import VelogFooterIcon from "../src/components/SVG/Footer/VelogFooterIcon"
+
 const contact = () => {
   return(
     <Layout>
@@ -12,7 +13,7 @@ const contact = () => {
         <meta name="description" content="프론트엔드 개발자 이창훈 포트폴리오" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <section className="text-gray-600 body-font">
+      <section className="text-gray-600 body-font h-full">
         <div className="container mx-auto flex px-5 py-24 justify-center flex-row gap-5">
           <div className="lg:w-1/5 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded">
             <Image
