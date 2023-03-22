@@ -14,8 +14,8 @@ const contact = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <section className="text-gray-600 body-font h-screen">
-        <div className="container mx-auto flex px-5 py-24 justify-center flex-row gap-5">
-          <div className="lg:w-1/5 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded">
+        <div className="container mx-auto lg:flex md:flex md: flex-row lg:flex-row px-5 py-24 justify-center gap-5 sm:flex-col">
+          <div className="lg:w-1/5 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded ">
             <Image
             src={"/profile.jpg"}
             width={100}
@@ -25,9 +25,9 @@ const contact = () => {
             layout="responsive"
             />
           </div>
-          <div className="flex flex-col flex-wrap -mb-10 lg:text-left text-center">
-            <div className="flex mb-5 items-center flex-row justify-between">
-              <div className="w-12 h-12 inline-flex items-center justify-center rounded-md bg-[#ece6cc]  dark:text-violet-800">
+          <div className="flex flex-col flex-wrap -mb-10 lg:text-left text-center"> 
+            <div className="flex mb-5 items-center flex-row">
+              <div className="w-12 h-12 inline-flex items-center justify-center rounded-md bg-[#ece6cc]  ">
                 <MailFooterIcon/>
               </div>
               <div className="ml-5">
