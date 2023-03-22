@@ -5,7 +5,6 @@ import { TOKEN, DATABASE_ID } from "../config";
 import ProjectItem from "../src/components/Project/ProjectItem";
 import type { ProjecInterface } from "../types/interface";
 
-
 interface ProjectInterface {
   projects: ProjecInterface[];
 }

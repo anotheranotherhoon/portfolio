@@ -1,7 +1,6 @@
 import Layout from "../src/components/Common/Layout"
 import Head from "next/head"
 import Image from "next/image"
-import profile from "../public/profile.jpeg"
 import MailFooterIcon from "../src/components/SVG/Footer/MailFooterIcon"
 import GithubFooterIcon from "../src/components/SVG/Footer/GithubFooterIcon"
 import VelogFooterIcon from "../src/components/SVG/Footer/VelogFooterIcon"
@@ -17,9 +16,12 @@ const contact = () => {
         <div className="container mx-auto flex px-5 py-24 justify-center flex-row gap-5">
           <div className="lg:w-1/5 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded">
             <Image
-              src={profile}
-              alt="이창훈 프로필 이미지"
-              className="rounded-xl"
+            src={"/profile.jpg"}
+            width={100}
+            height={100}
+            alt="이창훈 프로필 이미지"
+            className="rounded-xl"
+            layout="responsive"
             />
           </div>
           <div className="flex flex-col flex-wrap -mb-10 lg:text-left text-center">

@@ -2,7 +2,6 @@ import Layout from "../src/components/Common/Layout"
 import Head from "next/head"
 import Link from "next/link";
 import Image from "next/image";
-import profile from "../public/profile.jpeg"
 const AboutMe = () => {
   return (
     <Layout>
@@ -24,7 +23,9 @@ const AboutMe = () => {
           <div className="flex xl:flex-row flex-col  gap-10 lg:w-4/5">
             <div className="xl:w-3/5 lg:w-3/5 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded">
               <Image
-                src={profile}
+              src={"/profile.jpg"}
+                width={100}
+                height={100}
                 alt="이창훈 프로필 이미지"
                 className="rounded-xl"
                 layout="responsive"
