@@ -69,7 +69,7 @@ export const TOOLS = [
   {
     "key" : 1,
     "name" : "Github",
-    "describe" : "",
+    "describe" : "깃허브를 통해 팀원과 협업하여 프로젝트를 관리하고, 칸반보드를 이용해 작업 상태를 시각화하여 팀 내 작업을 효율적으로 관리한 경험이 있습니다",
     "src"  :< GithubIcon/>
   },
   {
