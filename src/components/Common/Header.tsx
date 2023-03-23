@@ -12,7 +12,7 @@ const Header = () => {
       <div className="container lg:mx-auto flex flex-wrap p-5 flex-col md:flex-row md:items-center lg:items-center ">
         <Link href="/" className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
           <Icon/>
-          <span className="ml-3 text-xl">프론트엔드 개발자 이창훈</span>
+          <span className="ml-3 text-xl font-bold">프론트엔드 개발자 이창훈</span>
         </Link>
 
         {/* 웹 */}
