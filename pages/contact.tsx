@@ -4,7 +4,7 @@ import Image from "next/image"
 import MailFooterIcon from "../src/components/SVG/Footer/MailFooterIcon"
 import GithubFooterIcon from "../src/components/SVG/Footer/GithubFooterIcon"
 import VelogFooterIcon from "../src/components/SVG/Footer/VelogFooterIcon"
-
+import PlaceToContact from "../src/components/Contact/PlaceToContact"
 const contact = () => {
   return(
     <Layout>
@@ -26,63 +26,9 @@ const contact = () => {
             />
           </div>
           <div className="flex flex-col flex-wrap -mb-10 lg:text-left text-center"> 
-            <div className="flex mb-5 items-center flex-row">
-              <div className="w-12 h-12 inline-flex items-center justify-center rounded-md bg-[#ece6cc]  ">
-                <MailFooterIcon/>
-              </div>
-              <div className="ml-5">
-                <a
-                  href="mailto:changhoon1030@gmail.com"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <h2
-                    className="text-gray-900 font-medium text-xl hover:underline transition duration-300 transform 
-                    hover:scale-[1.02]  "
-                  >
-                    changhoon1030@gmail.com
-                  </h2>
-                </a>
-              </div>
-            </div>
-            <div className="flex mb-5 items-center flex-row">
-              <div className="w-12 h-12 inline-flex items-center justify-center rounded-md bg-[#ece6cc]  ">
-                <GithubFooterIcon/>
-              </div>
-              <div className="ml-5">
-                <a
-                  href="https://github.com/anotheranotherhoon"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <h2
-                    className="text-gray-900 font-medium text-xl hover:underline transition duration-300 transform 
-                    hover:scale-[1.02]  "
-                  >
-                    깃허브 바로가기
-                  </h2>
-                </a>
-              </div>
-            </div>
-            <div className="flex mb-5 items-center flex-row">
-              <div className="w-12 h-12 inline-flex items-center justify-center rounded-md bg-[#ece6cc]  ">
-                <VelogFooterIcon/>
-              </div>
-              <div className="ml-5">
-                <a
-                  href="https://velog.io/@anotherhoon"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <h2
-                    className="text-gray-900 font-medium text-xl hover:underline transition duration-300 transform 
-                    hover:scale-[1.02]   "
-                  >
-                    블로그 바로가기
-                  </h2>
-                </a>
-              </div>
-            </div>
+          <PlaceToContact  contact={<MailFooterIcon/>} url={"mailto:changhoon1030@gmail.com"} way={"changhoon1030@gmail.com"}/>
+          <PlaceToContact  contact={<GithubFooterIcon/>} url={"https://github.com/anotheranotherhoon"} way={"깃허브 바로가기"}/>
+          <PlaceToContact  contact={<VelogFooterIcon/>} url={"https://velog.io/@anotherhoon"} way={"블로그 바로가기"}/>
           </div>
         </div>
       </section>
