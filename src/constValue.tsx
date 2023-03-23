@@ -58,8 +58,8 @@ export const SKILLS = [
   } ,
   {
     "key" : 8,
-    "name" : "tailwind",
-    "describe" : "tailwind의 반응형 키워드를 사용하여 웹 페이지를 제작한 경험이 있습니다.",
+    "name" : "tailwindCSS",
+    "describe" : "tailwindCSS의 반응형 키워드를 사용하여 웹 어플리케이션을 제작한 경험이 있습니다.",
     "src"  :< TailwindIcon/>
   }
 
