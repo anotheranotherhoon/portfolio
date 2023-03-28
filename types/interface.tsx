@@ -44,6 +44,7 @@ export interface PropertiesType {
   URL: DeployType;
   Description: DescriptionType;
   WorkPeriod: WorkPeriodType;
+  extraPeriod :WorkPeriodType;
   Tags: TagsType;
   Name: NameType;
   portfolio : PortfolioType;

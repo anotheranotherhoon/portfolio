@@ -1,4 +1,4 @@
-import type { ProjecInterface, TagType } from "../../../types/interface"
+import type { ProjecInterface, TagType, WorkPeriodType } from "../../../types/interface"
 import Image from "next/image";
 
 interface ProjectItemProps {
@@ -15,9 +15,12 @@ const ProjectItem = ({ projectInfo }: ProjectItemProps) => {
   const portfolioUrl = projectInfo.properties.portfolio.url;
   const coverUrl = projectInfo.properties.coverLink.url;
   const start = projectInfo.properties.WorkPeriod.date.start;
-  const end = projectInfo.properties.WorkPeriod.date.end
+  const end = projectInfo.properties.WorkPeriod.date.end;
+  const extraStart : string | null =  projectInfo.properties.extraPeriod.date?.start ;
+  const extraEnd : string | null  = projectInfo.properties.extraPeriod.date?.end ;
   const tags = projectInfo.properties.Tags.multi_select;
   const projectType = projectInfo.properties.team.rich_text[0].plain_text;
+  console.log(extraStart, extraEnd)
   const calculatedPeriod = (start: string, end: string) => {
     const startDateStringArray = start.split("-");
     const endDateStringArray = end.split("-");
@@ -25,7 +28,6 @@ const ProjectItem = ({ projectInfo }: ProjectItemProps) => {
     var endDate = new Date(Number(endDateStringArray[0]), Number(endDateStringArray[1]), Number(endDateStringArray[2]));
     const diffInMs = Math.abs(Number(endDate) - Number(startDate));
     const result = diffInMs / (1000 * 60 * 60 * 24);
-    console.log(tags)
     return result;
   };
   return (
@@ -63,6 +65,12 @@ const ProjectItem = ({ projectInfo }: ProjectItemProps) => {
           {calculatedPeriod(start, end)}
           일)
         </h4>
+        {extraStart&&extraEnd&&
+        <h4 className="mb-2">
+          리팩토링 기간 : {extraStart} ~ {extraEnd} (
+          {calculatedPeriod(extraStart, extraEnd)}
+          일)
+        </h4>}
         <div className="flex items-start mt-2 overflow-auto ">
           {tags!.map((aTag : TagType)   => (
             <h1
