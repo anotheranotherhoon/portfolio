@@ -2,7 +2,9 @@ import Layout from "../src/components/Common/Layout"
 import Head from "next/head"
 import Link from "next/link"
 import {SKILLS, TOOLS} from "../src/constValue"
-import { SkillsType } from "../types/interface"
+import type { SkillsType } from "../types/interface"
+import SkillCard from "../src/components/Skills/SkillCard"
+
 const skills = () => {
   return(
     <Layout>
@@ -24,14 +26,8 @@ const skills = () => {
           <div className="flex flex-wrap lg:w-4/5 md:mx-auto sm:mb-2">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 m-8 py-5 w-full">
             {
-              SKILLS.map((el:SkillsType)=>
-              <div key={el.key} className="flex">
-                <div className="mr-3">{el.src}</div>
-                <div>
-                <div className="text-[#5367FF] font-medium">{el.name}</div>
-                <div>{el.describe}</div>
-                </div>
-              </div>
+              SKILLS.map((skill:SkillsType)=>
+              <SkillCard key={skill.key} skill={skill}/>
               )
             }
             </div>
