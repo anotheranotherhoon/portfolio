@@ -36,7 +36,7 @@ const Header = () => {
         </nav>
 
         {/* 모바일 */}
-        <div className="lg:hidden sm:visible text-right" onClick={handleMenuClick}>
+        <div className="lg:hidden sm:flex text-right" onClick={handleMenuClick}>
           {isMenuClicked ? 
           "✕"
           :
